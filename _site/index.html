@@ -161,32 +161,13 @@
                     </div>
                     <div class="recent-posts material-card text">
                       <h1>Recent Blog Posts</h1>
-                      <li class="post" style="display: grid; font-size: 16px">
-                        <a href="/blog/2024/01/05/matter-livestream/"
-                          >The State of Matter livestream</a
-                        >
-                        <small class="blog-date">January 5, 2024</small>
-                      </li>
-                      <li class="post" style="display: grid; font-size: 16px">
-                        <a href="/blog/2024/01/03/release-20241/"
-                          >2024.1: Happy automating!</a
-                        >
-                        <small class="blog-date">January 3, 2024</small>
-                      </li>
-                      <li class="post" style="display: grid; font-size: 16px">
-                        <a
-                          href="/blog/2023/12/27/companion-app-for-ios-202312-lets-go/"
-                          >Companion app for iOS 2023.12: Let’s go!</a
-                        >
-                        <small class="blog-date">December 27, 2023</small>
-                      </li>
-                      <li class="post" style="display: grid; font-size: 16px">
-                        <a
-                          href="/blog/2023/12/14/disabling-new-login-page-functionality/"
-                          >Disabling new login page functionality</a
-                        >
-                        <small class="blog-date">December 14, 2023</small>
-                      </li>
+                      <ul>
+                        {% for post in site.posts %}
+                          <li>
+                            <a href="{{ post.url }}">{{ post.title }}</a>
+                          </li>
+                        {% endfor %}
+                      </ul>
                     </div>
                   </div>
                   <div
