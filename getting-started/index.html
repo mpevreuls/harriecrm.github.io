@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>HarrieCrm</title>
+    <meta name="author" content="Marcel Vreuls" />
+    <meta
+      name="description"
+      content="Open source home automation that puts local control and privacy first. Powered by a worldwide community of tinkerers and DIY enthusiasts. Perfect to run on a..."
+    />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="canonical" href="https://www.harriecrm.eu/getting-started/">
+    <meta property="og:title" content="HarrieCrm" />
+    <meta property="og:site_name" content="HarrieCrm" />
+    <meta property="og:url" content="https://www.harriecrm.eu/" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="Open source home automation that puts local control and privacy first. Powered by a worldwide community of tinkerers and DIY enthusiasts. Perfect to run on a Raspberry Pi or a local server."
+    />
+    <meta property="og:image" content="../images/default-social.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@home_assistant" />
+    <meta name="twitter:title" content="HarrieCrm" />
+    <meta
+      name="twitter:description"
+      content="Open source home automation that puts local control and privacy first. Powered by a worldwide community of tinkerers and DIY enthusiasts. Perfect to run on a Raspberry Pi or a local server."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.harriecrm.eu/images/default-social.png"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/@docsearch/css@3/dist/style.min.css" rel="stylesheet"  />
+    <link href="../stylesheet/style.min.css" rel="stylesheet">
+    <link href="../stylesheet/prism.css" rel="stylesheet">
+    <link href="../stylesheet/screen.css" media="screen, projection, print" rel="stylesheet">
+    <link href="https://www.home-assistant.io/atom.xml" rel="alternate" title="HarrieCrm" type="application/atom+xml">
+    <link rel="shortcut icon" href="./images/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/images/favicon-192x192.png"
+      sizes="192x192"
+    />
+  </head>
+  <body id="getting_started">
+<header class="site-header">
+<div class="grid-wrapper">
+<div class="grid">
+<div class="grid__item three-tenths lap-two-sixths palm-one-whole ha-title">
+<a href="https://www.home-assistant.io/" class="site-title">
+<img src="../images/harrie-logo.png" height="36" alt="HarrieCRM">
+</a>
+</div>
+<div class="grid__item seven-tenths lap-four-sixths palm-one-whole">
+<nav>
+<input type="checkbox" id="toggle">
+<label for="toggle" class="toggle" data-open="Main Menu" data-close="Close Menu"></label>
+<ul class="menu pull-right">
+<li><a href="https://www.home-assistant.io/getting-started/">Getting started</a></li>
+<li>
+<a href="https://www.home-assistant.io/docs/">Documentation <i class="icon icon-caret-down"></i></a>
+<ul>
+<li><a href="https://www.home-assistant.io/installation/">Installation</a></li>
+<li>
+<a href="https://www.home-assistant.io/docs/configuration/">Configuration</a>
+</li>
+<li>
+<a href="https://www.home-assistant.io/docs/automation/">Automation</a>
+</li>
+<li>
+<a href="https://www.home-assistant.io/docs/scripts/">Scripting</a>
+</li>
+<li>
+<a href="https://www.home-assistant.io/dashboards/">Dashboards</a>
+</li>
+<li>
+<a href="https://www.home-assistant.io/voice_control/">Voice assistant</a>
+</li>
+</ul>
+</li>
+<li><a href="https://www.home-assistant.io/integrations/">Integrations</a></li>
+<li><a href="https://www.home-assistant.io/examples/">Examples</a></li>
+<li><a href="https://www.home-assistant.io/blog/">Blog</a></li>
+<li><a href="https://www.home-assistant.io/help/">Need help?</a></li>
+<li>
+<div class="docsearch" id="docsearch"><button type="button" class="DocSearch DocSearch-Button" aria-label="Search"><span class="DocSearch-Button-Container"><svg width="20" height="20" class="DocSearch-Search-Icon" viewBox="0 0 20 20"><path d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z" stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg><span class="DocSearch-Button-Placeholder">Search</span></span><span class="DocSearch-Button-Keys"><kbd class="DocSearch-Button-Key"><svg width="15" height="15" class="DocSearch-Control-Key-Icon"><path d="M4.505 4.496h2M5.505 5.496v5M8.216 4.496l.055 5.993M10 7.5c.333.333.5.667.5 1v2M12.326 4.5v5.996M8.384 4.496c1.674 0 2.116 0 2.116 1.5s-.442 1.5-2.116 1.5M3.205 9.303c-.09.448-.277 1.21-1.241 1.203C1 10.5.5 9.513.5 8V7c0-1.57.5-2.5 1.464-2.494.964.006 1.134.598 1.24 1.342M12.553 10.5h1.953" stroke-width="1.2" stroke="currentColor" fill="none" stroke-linecap="square"></path></svg></kbd><kbd class="DocSearch-Button-Key">K</kbd></span></button></div>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</header>
+<div class="page-content">
+<div class="grid-wrapper">
+<div class="grid grid-center">
+<div class="grid__item two-thirds lap-one-whole palm-one-whole">
+<article class="page">
+<header>
+<h1 class="title indent">
+Getting Started
+</h1>
+</header>
+<hr class="divider">
+<a href="https://www.home-assistant.io/installation/" class="link-card next-step">
+<div class="material-card text">
+<p>Installation</p>
+<svg viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path></svg>
+</div>
+</a>
+<a href="https://www.home-assistant.io/getting-started/onboarding/" class="link-card next-step">
+<div class="material-card text">
+<p>Onboarding</p>
+<svg viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path></svg>
+</div>
+</a>
+<a href="https://www.home-assistant.io/getting-started/onboarding_dashboard/" class="link-card next-step">
+<div class="material-card text">
+<p>Edit the dashboard</p>
+<svg viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path></svg>
+</div>
+</a>
+<a href="https://www.home-assistant.io/getting-started/concepts-terminology/" class="link-card next-step">
+<div class="material-card text">
+<p>Concepts and terminology</p>
+<svg viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path></svg>
+</div>
+</a>
+<a href="https://www.home-assistant.io/getting-started/integration/" class="link-card next-step">
+<div class="material-card text">
+<p>Integration</p>
+<svg viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path></svg>
+</div>
+</a>
+<a href="https://www.home-assistant.io/getting-started/automation/" class="link-card next-step">
+<div class="material-card text">
+<p>Automation</p>
+<svg viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path></svg>
+</div>
+</a>
+<a href="https://www.home-assistant.io/getting-started/presence-detection/" class="link-card next-step">
+<div class="material-card text">
+<p>Presence detection</p>
+<svg viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path></svg>
+</div>
+</a>
+<a href="https://www.home-assistant.io/getting-started/join-the-community/" class="link-card next-step">
+<div class="material-card text">
+<p>Join the community</p>
+<svg viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path></svg>
+</div>
+</a>
+<a href="https://www.home-assistant.io/getting-started/configuration/" class="link-card next-step">
+<div class="material-card text">
+<p>Advanced Configuration</p>
+<svg viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path></svg>
+</div>
+</a>
+<div class="material-card text feedback" id="feedback_section">
+<h4><a href="https://www.home-assistant.io/getting-started/#feedback_section" class="title-link"><b> Help us to improve our documentation</b></a></h4>
+Suggest an edit to this page, or provide/view feedback for this page.
+<div class="links">
+<a href="https://github.com/home-assistant/home-assistant.github.io/tree/current/source/getting-started/index.markdown" target="_blank" rel="external nofollow"><i class="icon-edit"></i> Edit</a>
+<a href="https://github.com/home-assistant/home-assistant.github.io/issues/new?template=feedback.yml&amp;url=https%3A%2F%2Fwww.home-assistant.io%2Fgetting-started%2F&amp;version=2024.1.3&amp;labels=current" target="_blank" rel="external nofollow"><i class="icon-comment"></i> Provide feedback</a>
+<a href="https://github.com/home-assistant/home-assistant.github.io/issues?utf8=%E2%9C%93&amp;q=%22%2Fgetting-started%2F%22&amp;in=body" target="_blank" rel="external nofollow"><i class="icon-comments"></i> View given feedback</a>
+</div>
+</div>
+</article>
+</div>
+<aside id="sidebar" class="grid__item one-third lap-one-whole palm-one-whole">
+<div class="grid">
+<section class="aside-module grid__item one-whole lap-one-half">
+<div class="section">
+<h1 class="title delta">Getting started</h1>
+<ul class="divided sidebar-menu">
+<li><a href="https://www.home-assistant.io/installation/">Installation </a></li>
+<li><a href="https://www.home-assistant.io/getting-started/onboarding/">Onboarding </a></li>
+<li><a href="https://www.home-assistant.io/getting-started/concepts-terminology/">Concepts and terminology </a></li>
+<li><a href="https://www.home-assistant.io/getting-started/onboarding_dashboard/">Edit the dashboard </a></li>
+<li><a href="https://www.home-assistant.io/getting-started/integration/">Integration </a></li>
+<li><a href="https://www.home-assistant.io/getting-started/automation/">Automation </a></li>
+<li>
+<a href="https://www.home-assistant.io/getting-started/presence-detection/">Presence detection
+</a>
+</li>
+<li>
+<a href="https://www.home-assistant.io/getting-started/join-the-community/">Join the community
+</a>
+</li>
+<li>
+<a href="https://www.home-assistant.io/getting-started/configuration/">Advanced configuration </a>
+</li>
+</ul>
+</div>
+</section>
+</div>
+<script type="text/javascript">
+  // Some sidebars are longer than the screen so they can't be locked.
+  document.addEventListener('DOMContentLoaded', function() {
+    const sidebar = document.querySelector("#sidebar").querySelector(".grid");
+    const footer = document.querySelector("footer").querySelector(".grid")
+    if (sidebar) {
+      const content = document.querySelector(".page-content").querySelector(".grid-wrapper");
+      const windowHeight = window.innerHeight - 82;
+      if (sidebar.clientHeight > content.clientHeight || sidebar.clientHeight > windowHeight - footer.clientHeight) {
+        sidebar.style.display = "contents"
+      }
+    }
+  });
+</script>
+</aside>
+</div>
+</div>
+<footer>
+<div class="grid-wrapper">
+<div class="grid">
+<div class="grid__item">
+<div class="copyright grid">
+<div class="company grid__item one-third lap-one-half palm-one-whole">
+<div class="title">
+<img src="./Getting Started - Home Assistant_files/home-assistant-logo-vertical.svg" height="120" alt="Home Assistant">
+</div>
+<div class="icons">
+<a rel="me" href="https://twitter.com/home_assistant" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>
+<a rel="me" href="https://fosstodon.org/@homeassistant" title="Mastodon" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 216.4144 232.00976" alt="Mastodon">
+<path d="M211.80734 139.0875c-3.18125 16.36625-28.4925 34.2775-57.5625 37.74875-15.15875 1.80875-30.08375 3.47125-45.99875 2.74125-26.0275-1.1925-46.565-6.2125-46.565-6.2125 0 2.53375.15625 4.94625.46875 7.2025 3.38375 25.68625 25.47 27.225 46.39125 27.9425 21.11625.7225 39.91875-5.20625 39.91875-5.20625l.8675 19.09s-14.77 7.93125-41.08125 9.39c-14.50875.7975-32.52375-.365-53.50625-5.91875C9.23234 213.82 1.40609 165.31125.20859 116.09125c-.365-14.61375-.14-28.39375-.14-39.91875 0-50.33 32.97625-65.0825 32.97625-65.0825C49.67234 3.45375 78.20359.2425 107.86484 0h.72875c29.66125.2425 58.21125 3.45375 74.8375 11.09 0 0 32.975 14.7525 32.975 65.0825 0 0 .41375 37.13375-4.59875 62.915"></path>
+<path fill="#fff" d="M177.50984 80.077v60.94125h-24.14375v-59.15c0-12.46875-5.24625-18.7975-15.74-18.7975-11.6025 0-17.4175 7.5075-17.4175 22.3525v32.37625H96.20734V85.42325c0-14.845-5.81625-22.3525-17.41875-22.3525-10.49375 0-15.74 6.32875-15.74 18.7975v59.15H38.90484V80.077c0-12.455 3.17125-22.3525 9.54125-29.675 6.56875-7.3225 15.17125-11.07625 25.85-11.07625 12.355 0 21.71125 4.74875 27.8975 14.2475l6.01375 10.08125 6.015-10.08125c6.185-9.49875 15.54125-14.2475 27.8975-14.2475 10.6775 0 19.28 3.75375 25.85 11.07625 6.36875 7.3225 9.54 17.22 9.54 29.675"></path>
+</svg>
+</a>
+<a rel="me" href="https://www.facebook.com/homeassistantio" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>
+<a rel="me" href="https://github.com/home-assistant/home-assistant" title="GitHub" target="_blank"><i class="icon-github"></i></a>
+</div>
+</div>
+<div class="grid__item one-third lap-one-half palm-one-whole">
+<ul>
+<li>
+<a href="https://alerts.home-assistant.io/">Home Assistant Alerts</a>
+</li>
+<li>
+<a href="https://developers.home-assistant.io/">Developers</a>
+</li>
+<li><a href="https://data.home-assistant.io/">Data Science</a></li>
+<li>
+<a href="https://community.home-assistant.io/">Community Forum</a>
+</li>
+<li>
+<a href="mailto:hello@home-assistant.io">Contact</a> (no support!)
+</li>
+<li><a href="https://www.home-assistant.io/security/">Security Vulnerabilities</a></li>
+<li><a href="https://www.home-assistant.io/privacy/">Privacy</a></li>
+<li>
+<a href="https://status.home-assistant.io/">System Status</a>
+</li>
+</ul>
+</div>
+<div class="grid__item one-third lap-one-half palm-one-whole">
+Website powered by <a href="https://jekyllrb.com/">Jekyll</a> and the
+<a href="https://github.com/coogie/oscailte">Oscailte theme</a>.<br>
+<br>
+<a href="https://www.netlify.com/">
+<img src="./Getting Started - Home Assistant_files/netlify.svg" alt="Deploys by Netlify Badge">
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<script type="module" src="./js/lite-youtube.js"></script>
+<script src="./js/prism.js" type="text/javascript" defer=""></script>
+<script type="text/javascript" src="./js/index.min.js"></script>
+<script type="text/javascript">
+docsearch({
+  container: '#docsearch',
+  appId: 'FBHBYS3J0U',
+  indexName: 'home-assistant',
+  apiKey: "ba6f7e6d97b3d3d2f778978c742a47c6",
+});
+document.querySelector('.site-title').addEventListener('contextmenu', function(ev) {
+  ev.preventDefault();
+  document.location.assign("https://design.home-assistant.io/#brand/logo")
+});
+</script>
+<script defer="" src="./Getting Started - Home Assistant_files/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon="{&quot;rayId&quot;:&quot;846a10778e38ca48&quot;,&quot;version&quot;:&quot;2023.10.0&quot;,&quot;token&quot;:&quot;5cecb750997f42328a45cbfc192e0673&quot;}" crossorigin="anonymous"></script>
+
+
+<webchatgpt-custom-element-5ae45fd8-8a26-406f-98f9-b8eeeaf88f92 id="webchatgpt-snackbar" style="color: rgb(255, 255, 255);"><template shadowrootmode="open"><style id="webchatgpt-snackbar-container-emotion-style"></style><div id="webchatgpt-snackbar-container" style="z-index: 2147483647;"></div></template></webchatgpt-custom-element-5ae45fd8-8a26-406f-98f9-b8eeeaf88f92></body></html>
